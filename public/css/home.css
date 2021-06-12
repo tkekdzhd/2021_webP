@@ -1,0 +1,125 @@
+/* purple: #57419d yellow: #ffcb83 */
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+    /* font-family: 'Heebo', sans-serif; */
+    background-color: #57419d;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+#menu{
+    height: 100%;
+    width: 10%;
+}
+
+#logo{
+    margin: 3rem 0;
+    color: #ffcb83;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+#menu ul{
+    font-family: 'Heebo', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.9rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+#menu ul li{
+    margin-bottom: 1rem;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    /* transition: all .5s; */
+}
+
+#menu ul li a:hover{
+    color: #ffcb83;
+    font-weight: 500;
+}
+
+#container{
+    width: 80% !important;
+    height: 125% !important;
+    background-color: #fff !important;
+    border-radius: 25px !important;
+    /* display: flex; */
+}
+
+.container{
+    width: 88% !important;
+    /* height: 100%; */
+}
+
+#calendar{
+    /* margin: 0 auto; */
+    /* width: 88% !important; */
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.panel{
+    width: 25%;
+    margin: 5rem;
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.col-lg-6{
+    width: 100% !important;
+}
+
+.input-group{
+    width: 100% !important;
+}
+
+.select2{
+    width: 100% !important;
+}
+
+.select2-search__field{
+    width: 100% !important;
+}
+
+.fc-day-number{
+    color: #000 !important;
+}
+
+#contextMenu{
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.modal{
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.inputModal{
+    resize: none !important;
+}
+
+#li_sName{
+    font-family: 'NanumSquare', sans-serif !important;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #fff;
+}

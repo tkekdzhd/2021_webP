@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/signup.css">
+    <title>SIGNUP</title>
+</head>
+
+<body>
+    <div id="login_div" class="sa">
+        <form id="login_form" action="/api/users/signup" method="POST">
+            <h1>SIGN UP</h1>
+            <input class="login_form_input" type="text" placeholder="ID" name="user_id" id="user_id" autocomplete="off">
+            <br>
+            <input class="login_form_input" type="password" placeholder="Password" name="password" id="password" autocomplete="off">
+            <br>
+            <input class="login_form_input" type="text" placeholder="Name" name="username" id="username" autocomplete="off">
+            <input type="submit" value="REGISTER" id="signin_submit">
+        </form>
+        <div id="signup">
+            <span>Back to</span>
+            <a href="/introduction" id="goto_signup">Log in</a>
+        </div>
+    </div>
+    
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="/js/signup.js"></script>
+</body>
+
+</html>
