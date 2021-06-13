@@ -108,16 +108,6 @@ $('#deleteEvent').on('click', function () {
     eventModal.modal('hide');
 
     //삭제시
-    // $.ajax({
-    //     type: "get",
-    //     url: "",
-    //     data: {
-    //         //...
-    //     },
-    //     success: function (response) {
-    //         alert('삭제되었습니다.');
-    //     }
-    // });
     $.ajax({
         type: "POST",
         url: "/delete_ajax_data",

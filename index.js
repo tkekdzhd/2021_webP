@@ -41,12 +41,17 @@ app.get('/introduction', loginController);
 app.get('/auth/signup', newUserController);
 app.get('/auth/home', homeController);
 // app.get('/auth/memo', memoController);
+
 app.get('/auth/memo', async (req,res)=>{
-    if(req.session.userId) {
-        var sName = req.session.userId;
-        const blogposts = await BlogPost.find({})
+    if(req.session.ruserId) {
+        var sName = req.session.ruserId;
+        var rName = req.session.userId;
+        var find_query = { 'user_id': sName };
+        const blogposts = await BlogPost.find(find_query, (error,blogposts)=>{
+            // console.log(error, blogposts)
+        });
         res.render('auth/memo',{
-            blogposts, sName: sName
+            blogposts, sName: rName
         })
         // res.render('auth/memo', {sName: sName});
         // console.log(sName);
@@ -65,13 +70,13 @@ app.post('/posts/store', async (req,res)=>{
         body
     } = req.body;
     await BlogPost.create({user_id,body})
-    res.redirect('/auth/memo')
+    res.send('/auth/memo')
 })
 app.post('/posts/delete', async (req, res) => {
     console.log(req.body);
-    var id = req.body._id
+    var id = req.body.id
     const blogposts = await BlogPost.findByIdAndDelete(id);
-    // res.send(blogposts);
+    res.send('/auth/memo')
 });
 app.post('/api/users/signup', storeUserController);
 app.post('/users/login', loginUserController);

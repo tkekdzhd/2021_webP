@@ -14,12 +14,50 @@ body{
 }
 
 .row{
-    overflow: auto;
-    width: 100% !important;
-    height: 5rem;
+    overflow-y: auto;
+    white-space : normal;
+    /* overflow : hidden; */
+    /* width: 30% !important; */
+    height: 6rem;
     display: flex;
     align-items: center;
     border-radius: 10px !important;
     background-color: #fff !important;
     border: 1px solid #e0e0e0 !important;
+}
+
+#addBtn{
+    border:none;
+    float: right;
+}
+
+#addBtn:hover{
+    background-color: #ffcb83;
+}
+
+#card_list{
+    height: 30%;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+#card_list_div{
+    max-height: 51rem;
+    overflow: auto;
+}
+
+#delBtn{
+    margin-top: 1rem;
+    float: right;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'NanumSquare', sans-serif !important;
+    font-weight: bold;
+    background-color: #57419d;
+    color: #fff;
+}
+#txt_cnt{
+    margin-top: 1rem;
 }

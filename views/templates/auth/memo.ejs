@@ -43,18 +43,25 @@
                             <textarea id="addTxt" class="form-control" rows="6"></textarea>
                             <div id="txt_cnt">(0 / 500)</div>
                         </div>
-                        <button type="submit" id="addBtn" class="btn btn-primary">Add Memo</button>
+                        <button type="submit" id="addBtn" class="btn btn-primary">Add</button>
                     </form>
                 </div>
                 <hr>
-                <form id="card_list" action="/posts/delete" method="POST">
-                    <% for (var i = 0; i < blogposts.length; i++){ %>
-                    <div id="notes" class="row container-fluid m-2">
-                        <%= blogposts[i].body %>&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button type="submit" id="delBtn">삭제</a>
-                    </div>
-                    <% } %>
-                </form>
+                <div id="card_list_div">
+                    <form id="card_list" action="/posts/delete" method="POST">
+                        <% for (var i = 0; i < blogposts.length; i++){ %>
+                            <!-- <input type="hidden" name="id" > -->
+                            <div id="notes" class="row container-fluid m-2">
+                                <input type="radio" name="id_check" value='<%= blogposts[i]._id %>'>
+                                <div>
+                                    <%= blogposts[i].body %>
+                                </div>
+                            </div>
+                        <% } %>
+                    </form>
+                </div>
+                <button type="submit" id="delBtn"><i class="xi-trash">&nbsp</i>선택삭제</a>
+
             </div>
             
         </div>

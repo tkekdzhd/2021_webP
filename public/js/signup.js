@@ -38,5 +38,10 @@ function signup(e) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(req),
+    // }).then((res)=>window.location.href = res)
+    }).then(res=>{
+        if(res.redirected == true){
+            window.location.href = res.url
+        }
     })
 }

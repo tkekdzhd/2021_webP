@@ -7,7 +7,7 @@
     "author": "",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js,html index.js",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
