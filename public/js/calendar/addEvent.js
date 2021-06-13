@@ -19,7 +19,6 @@ var modifyBtnContainer = $('.modalBtnContainer-modifyEvent');
  *  새로운 일정 생성
  * ************** */
 var newEvent = function (start, end, eventType) {
-
     $("#contextMenu").hide(); //메뉴 숨김
 
     modalTitle.html('새로운 일정');
@@ -58,6 +57,10 @@ var newEvent = function (start, end, eventType) {
         if (eventData.start > eventData.end) {
             alert('끝나는 날짜가 앞설 수 없습니다.');
             return false;
+        }
+
+        if(eventData.start == eventData.end){
+            eventData.end = eventData.start;
         }
 
         if (eventData.title === '') {
